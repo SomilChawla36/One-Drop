@@ -1,155 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donation Certificates</title>
-  <link rel="stylesheet" href="../css/certificates.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donation Certificates</title>
+<link rel="stylesheet" href="../css/certificates.css">
 </head>
-
 <body>
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
-            <path d="M12 2s-6 8-6 13a6 6 0 0 0 12 0c0-5-6-13-6-13z" />
-          </svg>
+        <div class="nav-container">
+            <a href="certificates.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <path d="M12 2s-6 8-6 13a6 6 0 0 0 12 0c0-5-6-13-6-13z" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">One Drop</span>
+                    <span class="logo-sub">BLOOD BANK</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why-donate.html">Why Donate</a></li>
+                <li><a href="find.html">Find Blood</a></li>
+                <li><a href="become-a-donar.html">Become a Donor</a></li>
+                <li><a href="certificates.html" class="active">Certificates</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="login.html">Sign In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#request" class="btn-request">Request Blood</a>
+                <button class="hamburger" id="hamburger" aria-label="menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        <div class="logo-text">
-          <span class="logo-name">One Drop</span>
-          <span class="logo-sub">BLOOD BANK</span>
+    </nav>
+
+<div class="page">
+  <div class="badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+    DONATION CERTIFICATES
+  </div>
+
+  <h1>Your <span class="accent">proof of heroism</span></h1>
+
+  <p class="subtitle">
+    Every verified donation earns a tamper-proof digital certificate.
+    Look up yours, generate a new one, or verify any certificate's authenticity.
+  </p>
+
+  <div class="card">
+
+    <!-- radio inputs drive tab switching, pure CSS -->
+    <input type="radio" name="cert-tabs" id="tab-my" class="tab-input" checked>
+    <input type="radio" name="cert-tabs" id="tab-generate" class="tab-input">
+    <input type="radio" name="cert-tabs" id="tab-verify" class="tab-input">
+
+    <div class="tabs">
+      <label class="tab-label" for="tab-my">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        My Certificates
+      </label>
+      <label class="tab-label" for="tab-generate">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        Generate Certificate
+      </label>
+      <label class="tab-label" for="tab-verify">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2"/></svg>
+        Verify Certificate
+      </label>
+    </div>
+
+    <!-- ===================== MY CERTIFICATES ===================== -->
+    <div class="panel" id="panel-my">
+      <div class="panel-content">
+        <div class="field">
+          <label for="lookup-name">Full Name</label>
+          <input type="text" id="lookup-name" name="name" placeholder="As registered">
         </div>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="why-donate.html">Why Donate</a></li>
-        <li><a href="find.html">Find Blood</a></li>
-        <li><a href="become-a-donar.html">Become a Donor</a></li>
-        <li><a href="certificates.html" class="active">Certificates</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="login.html">Sign In</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="find.html" class="btn-request">Request Blood</a>
-        <button class="hamburger" id="hamburger" aria-label="menu">
-          <span></span><span></span><span></span>
+        <div class="field">
+          <label for="lookup-email">Email Address</label>
+          <input type="email" id="lookup-email" name="email" placeholder="you@example.com">
+        </div>
+        <p class="hint">Try: aryan.s@email.com or priya.p@email.com</p>
+        <button class="btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Look Up Certificates
         </button>
+
+        <div class="preview-divider"><span>SAMPLE RESULT</span></div>
+
+        <div class="mycert-list">
+          <div class="mycert-item">
+            <div class="mycert-item-left">
+              <div class="mycert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+              </div>
+              <div>
+                <div class="mycert-title">Donation on 17 August 2026</div>
+                <div class="mycert-sub">CERT-2026-847213</div>
+              </div>
+            </div>
+            <span class="mycert-view">View</span>
+          </div>
+
+          <div class="mycert-item">
+            <div class="mycert-item-left">
+              <div class="mycert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+              </div>
+              <div>
+                <div class="mycert-title">Donation on 12 February 2026</div>
+                <div class="mycert-sub">CERT-2026-113560</div>
+              </div>
+            </div>
+            <span class="mycert-view">View</span>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span>Static demo</span>
+        </div>
       </div>
     </div>
-  </nav>
 
-  <div class="page">
-    <div class="badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round">
-        <circle cx="12" cy="8" r="6" />
-        <path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5" />
-      </svg>
-      DONATION CERTIFICATES
+    <!-- ===================== GENERATE CERTIFICATE ===================== -->
+    <div class="panel" id="panel-generate">
+      <div class="panel-content">
+        <div class="field">
+          <label for="gen-name">Full Name</label>
+          <input type="text" id="gen-name" name="name" placeholder="e.g. Aryan Sharma">
+        </div>
+        <div class="field">
+          <label for="gen-email">Email Address</label>
+          <input type="email" id="gen-email" name="email" placeholder="you@example.com">
+        </div>
+        <div class="field field-row">
+          <div>
+            <label for="gen-blood">Blood Group</label>
+            <select id="gen-blood" name="blood">
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </div>
+          <div>
+            <label for="gen-date">Donation Date</label>
+            <input type="date" id="gen-date" name="date">
+          </div>
+        </div>
+        <div class="field">
+          <label for="gen-center">Donation Center</label>
+          <input type="text" id="gen-center" name="center" placeholder="e.g. City Hospital Blood Bank">
+        </div>
+        <button class="btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+          Generate Certificate
+        </button>
+
+        <div class="preview-divider"><span>SAMPLE CERTIFICATE</span></div>
+
+        <div class="certificate">
+          <div class="cert-seal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+          </div>
+          <div class="cert-kicker">CERTIFICATE OF APPRECIATION</div>
+          <div class="cert-title">Blood Donation Recognition</div>
+          <div class="cert-subtitle">This certifies that</div>
+          <div class="cert-name">Aryan Sharma</div>
+          <p class="cert-desc">has generously donated blood, helping save lives and support our community's health. We honor this act of heroism.</p>
+          <div class="cert-details">
+            <div>
+              <div class="cert-detail-label">DONATION DATE</div>
+              <div class="cert-detail-value">17 August 2026</div>
+            </div>
+            <div>
+              <div class="cert-detail-label">BLOOD GROUP</div>
+              <div class="cert-detail-value">O+</div>
+            </div>
+            <div>
+              <div class="cert-detail-label">DONATION CENTER</div>
+              <div class="cert-detail-value">City Hospital Blood Bank</div>
+            </div>
+            <div>
+              <div class="cert-detail-label">ISSUED ON</div>
+              <div class="cert-detail-value">20 August 2026</div>
+            </div>
+          </div>
+          <div class="cert-id">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2"/></svg>
+            CERT-2026-847213
+          </div>
+        </div>
+
+        <div class="note-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span>Static demo</span>
+        </div>
+      </div>
     </div>
 
-    <h1>Your <span class="accent">proof of heroism</span></h1>
-
-    <p class="subtitle">
-      Every verified donation earns a tamper-proof digital certificate.
-      Look up yours or verify any certificate's authenticity.
-    </p>
-
-    <div class="card">
-      <div class="tabs">
-        <button class="tab active" id="tab-my" onclick="switchTab('my')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-            <circle cx="12" cy="7" r="4" />
-          </svg>
-          My Certificates
-        </button>
-        <button class="tab" id="tab-verify" onclick="switchTab('verify')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <rect x="3" y="3" width="7" height="7" rx="1" />
-            <rect x="14" y="3" width="7" height="7" rx="1" />
-            <rect x="3" y="14" width="7" height="7" rx="1" />
-            <path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2" />
-          </svg>
+    <!-- ===================== VERIFY CERTIFICATE ===================== -->
+    <div class="panel" id="panel-verify">
+      <div class="panel-content">
+        <div class="field">
+          <label for="verify-id">Credential ID</label>
+          <input type="text" id="verify-id" name="id" placeholder="e.g. CERT-2026-847213">
+        </div>
+        <p class="hint">Enter the credential ID printed on the certificate to confirm it's genuine.</p>
+        <button class="btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
           Verify Certificate
         </button>
-      </div>
 
-      <div class="panel" id="panel-my">
-        <div class="panel-content">
-          <div class="field">
-            <label for="fullname">Full Name</label>
-            <input type="text" id="fullname" placeholder="As registered">
+        <div class="preview-divider"><span>SAMPLE RESULT</span></div>
+
+        <div class="verify-result verified">
+          <div class="verify-status-row ok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Verified — this certificate is authentic
           </div>
-          <div class="field">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="you@example.com">
+          <div class="verify-grid">
+            <div>
+              <div class="verify-item-label">DONOR NAME</div>
+              <div class="verify-item-value">Aryan Sharma</div>
+            </div>
+            <div>
+              <div class="verify-item-label">CREDENTIAL ID</div>
+              <div class="verify-item-value">CERT-2026-847213</div>
+            </div>
+            <div>
+              <div class="verify-item-label">DONATION DATE</div>
+              <div class="verify-item-value">17 August 2026</div>
+            </div>
+            <div>
+              <div class="verify-item-label">BLOOD GROUP</div>
+              <div class="verify-item-value">O+</div>
+            </div>
+            <div>
+              <div class="verify-item-label">DONATION CENTER</div>
+              <div class="verify-item-value">City Hospital Blood Bank</div>
+            </div>
+            <div>
+              <div class="verify-item-label">ISSUED ON</div>
+              <div class="verify-item-value">20 August 2026</div>
+            </div>
           </div>
-          <p class="hint">
-            Try: <a href="#" onclick="fillEmail('aryan.s@email.com'); return false;">aryan.s@email.com</a> or <a
-              href="#" onclick="fillEmail('priya.p@email.com'); return false;">priya.p@email.com</a>
-          </p>
-          <button class="btn" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8" />
-              <path d="m21 21-4.35-4.35" />
-            </svg>
-            Look Up Certificates
-          </button>
         </div>
-      </div>
-
-      <div class="panel" id="panel-verify" style="display:none;">
-        <div class="panel-content">
-          <div class="field">
-            <label for="certid">Certificate ID</label>
-            <input type="text" id="certid" placeholder="e.g. CERT-2026-000123">
-          </div>
-          <p class="hint">Enter the ID printed on the certificate to confirm it's genuine.</p>
-          <button class="btn" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M20 6 9 17l-5-5" />
-            </svg>
-            Verify Certificate
-          </button>
+        <div class="note-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span>Static demo</span>
         </div>
       </div>
     </div>
   </div>
-
-  <script>
-    function switchTab(name) {
-      const tabMy = document.getElementById('tab-my');
-      const tabVerify = document.getElementById('tab-verify');
-      const panelMy = document.getElementById('panel-my');
-      const panelVerify = document.getElementById('panel-verify');
-
-      if (name === 'my') {
-        tabMy.classList.add('active');
-        tabVerify.classList.remove('active');
-        panelMy.style.display = 'block';
-        panelVerify.style.display = 'none';
-      } else {
-        tabVerify.classList.add('active');
-        tabMy.classList.remove('active');
-        panelVerify.style.display = 'block';
-        panelMy.style.display = 'none';
-      }
-    }
-
-    function fillEmail(email) {
-      document.getElementById('email').value = email;
-    }
-  </script>
-
-  <script src="../javaScript/script.js"></script>
+</div>
 </body>
-
 </html>
