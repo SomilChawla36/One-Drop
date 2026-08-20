@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | One Drop Blood Bank</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <path d="M12 2s-6 8-6 13a6 6 0 0 0 12 0c0-5-6-13-6-13z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">One Drop</span>
+                    <span class="logo-sub">BLOOD BANK</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why-donate.html">Why Donate</a></li>
+                <li><a href="find.html">Find Blood</a></li>
+                <li><a href="become-a-donar.html">Become a Donor</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="login.html">Sign In</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="find.html" class="btn-request">Request Blood</a>
+                <button class="hamburger" id="hamburger" aria-label="menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="auth-page">
+        <section class="auth-layout" aria-labelledby="signup-title">
+
+            <aside class="auth-visual">
+                <div class="visual-content">
+                    <p class="visual-kicker">Join the movement</p>
+                    <h1>Be someone’s reason to hope.</h1>
+                    <p>
+                        Create your One Drop account and take the first step
+                        toward helping patients in need.
+                    </p>
+                </div>
+            </aside>
+
+            <section class="auth-form-area">
+                <header class="auth-heading">
+                    <span>Become a donor</span>
+                    <h1 id="signup-title">Create account</h1>
+                    <p>Register with One Drop in a few simple steps.</p>
+                </header>
+
+                <form class="auth-form" action="#" method="post">
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="signup-first-name">First name</label>
+                            <input
+                                type="text"
+                                id="signup-first-name"
+                                name="first_name"
+                                placeholder="Your first name"
+                                autocomplete="given-name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="signup-last-name">Last name</label>
+                            <input
+                                type="text"
+                                id="signup-last-name"
+                                name="last_name"
+                                placeholder="Your last name"
+                                autocomplete="family-name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="signup-email">Email address</label>
+                        <input
+                            type="email"
+                            id="signup-email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="signup-phone">Phone number</label>
+                        <input
+                            type="tel"
+                            id="signup-phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="signup-password">Password</label>
+                            <input
+                                type="password"
+                                id="signup-password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="signup-confirm-password">Confirm password</label>
+                            <input
+                                type="password"
+                                id="signup-confirm-password"
+                                name="confirm_password"
+                                placeholder="Repeat your password"
+                                autocomplete="new-password"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="captcha-box">
+                        <div class="captcha-code" aria-label="Captcha code">
+                            9R2M
+                        </div>
+
+                        <div class="form-field">
+                            <label for="signup-captcha">Enter the captcha</label>
+                            <input
+                                type="text"
+                                id="signup-captcha"
+                                name="captcha"
+                                placeholder="Type the code shown"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <label class="checkbox-label" for="signup-terms">
+                        <input
+                            type="checkbox"
+                            id="signup-terms"
+                            name="terms"
+                            required
+                        >
+                        I agree to the terms and conditions.
+                    </label>
+
+                    <button type="submit" class="submit-button">
+                        Create Account
+                    </button>
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="login.html" class="text-link">Sign in</a>
+                </p>
+            </section>
+        </section>
+
+        <footer class="auth-footer">
+            <p>&copy; 2024 One Drop Blood Bank. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="../javaScript/script.js"></script>
+</body>
+</html>

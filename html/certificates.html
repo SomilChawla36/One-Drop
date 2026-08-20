@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Certificates</title>
+  <link rel="stylesheet" href="../css/certificates.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+            <path d="M12 2s-6 8-6 13a6 6 0 0 0 12 0c0-5-6-13-6-13z" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">One Drop</span>
+          <span class="logo-sub">BLOOD BANK</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why-donate.html">Why Donate</a></li>
+        <li><a href="find.html">Find Blood</a></li>
+        <li><a href="become-a-donar.html">Become a Donor</a></li>
+        <li><a href="certificates.html" class="active">Certificates</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="login.html">Sign In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="find.html" class="btn-request">Request Blood</a>
+        <button class="hamburger" id="hamburger" aria-label="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <circle cx="12" cy="8" r="6" />
+        <path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5" />
+      </svg>
+      DONATION CERTIFICATES
+    </div>
+
+    <h1>Your <span class="accent">proof of heroism</span></h1>
+
+    <p class="subtitle">
+      Every verified donation earns a tamper-proof digital certificate.
+      Look up yours or verify any certificate's authenticity.
+    </p>
+
+    <div class="card">
+      <div class="tabs">
+        <button class="tab active" id="tab-my" onclick="switchTab('my')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          My Certificates
+        </button>
+        <button class="tab" id="tab-verify" onclick="switchTab('verify')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2" />
+          </svg>
+          Verify Certificate
+        </button>
+      </div>
+
+      <div class="panel" id="panel-my">
+        <div class="panel-content">
+          <div class="field">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="As registered">
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com">
+          </div>
+          <p class="hint">
+            Try: <a href="#" onclick="fillEmail('aryan.s@email.com'); return false;">aryan.s@email.com</a> or <a
+              href="#" onclick="fillEmail('priya.p@email.com'); return false;">priya.p@email.com</a>
+          </p>
+          <button class="btn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            Look Up Certificates
+          </button>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-verify" style="display:none;">
+        <div class="panel-content">
+          <div class="field">
+            <label for="certid">Certificate ID</label>
+            <input type="text" id="certid" placeholder="e.g. CERT-2026-000123">
+          </div>
+          <p class="hint">Enter the ID printed on the certificate to confirm it's genuine.</p>
+          <button class="btn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+            Verify Certificate
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(name) {
+      const tabMy = document.getElementById('tab-my');
+      const tabVerify = document.getElementById('tab-verify');
+      const panelMy = document.getElementById('panel-my');
+      const panelVerify = document.getElementById('panel-verify');
+
+      if (name === 'my') {
+        tabMy.classList.add('active');
+        tabVerify.classList.remove('active');
+        panelMy.style.display = 'block';
+        panelVerify.style.display = 'none';
+      } else {
+        tabVerify.classList.add('active');
+        tabMy.classList.remove('active');
+        panelVerify.style.display = 'block';
+        panelMy.style.display = 'none';
+      }
+    }
+
+    function fillEmail(email) {
+      document.getElementById('email').value = email;
+    }
+  </script>
+
+  <script src="../javaScript/script.js"></script>
+</body>
+
+</html>

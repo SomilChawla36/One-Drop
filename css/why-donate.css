@@ -1,0 +1,699 @@
+
+body {
+  background: #ffffff;
+  color: #111827;
+}
+
+/* ---------- shared section shell ---------- */
+.wd-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 90px 40px;
+}
+
+.wd-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+}
+
+.wd-heading {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  max-width: 720px;
+  color: #111827;
+}
+
+.wd-sub {
+  color: #6b7280;
+  font-size: 15px;
+  max-width: 620px;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+.wd-heading span {
+  color: #dc2626;
+}
+
+/* ---------- WHY-HERO ---------- */
+.wd-hero {
+  position: relative;
+  padding: 150px 20px 90px;
+  text-align: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.08) 0%, rgba(255, 255, 255, 0) 60%);
+}
+
+.wd-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+  opacity: 1;
+  transform: none;
+}
+
+.wd-hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 22px;
+  color: #111827;
+}
+
+.wd-hero-title .accent {
+  color: #dc2626;
+}
+
+.wd-hero-desc {
+  color: #4b5563;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 36px;
+}
+
+/* ---------- 4 CARDS: WHY IMPORTANT ---------- */
+.wd-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.wd-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 30px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.wd-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(220, 38, 38, 0.35);
+  background: rgba(220, 38, 38, 0.04);
+}
+
+.wd-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(220, 38, 38, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.wd-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.wd-card p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ---------- DONATION FLOW / INFOGRAPHIC ---------- */
+.wd-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wd-flow-stage {
+  flex: 1;
+  min-width: 190px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 26px 20px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wd-flow-stage.origin {
+  background: linear-gradient(160deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.03));
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.wd-flow-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.wd-flow-stage h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.wd-flow-stage p {
+  color: #6b7280;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.wd-flow-arrow {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, #dc2626 0 8px, transparent 8px 14px);
+  position: relative;
+}
+
+.wd-flow-arrow::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #dc2626;
+  border-bottom: 2px solid #dc2626;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.wd-components {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ---------- BENEFITS TWO COLUMN ---------- */
+.wd-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.wd-benefit-col {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
+  padding: 32px 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wd-benefit-col h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #111827;
+}
+
+.wd-benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wd-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.wd-benefit-item .check {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 1px;
+}
+
+/* ---------- ELIGIBILITY ---------- */
+.wd-eligibility {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wd-eligibility-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wd-eligibility-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  color: #374151;
+  background: #f9fafb;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+
+.wd-eligibility-item .tick {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.wd-note {
+  background: rgba(220, 38, 38, 0.05);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 16px;
+  padding: 22px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.wd-note strong {
+  color: #dc2626;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.wd-disclaimer {
+  font-size: 12.5px;
+  color: #9ca3af;
+  margin-top: 18px;
+  line-height: 1.6;
+}
+
+.wd-eligibility-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.wd-eligibility-visual .wd-flow-icon {
+  width: 84px;
+  height: 84px;
+}
+
+/* ---------- MYTH VS FACT (simple toggle reveal) ---------- */
+.wd-myths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.wd-myth-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 26px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.wd-myth-card:hover {
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.wd-myth-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.wd-myth-label.myth {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.1);
+}
+
+.wd-myth-label.fact {
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.wd-myth-card p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #1f2937;
+}
+
+.wd-myth-fact {
+  display: none;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.wd-myth-card.open .wd-myth-fact {
+  display: block;
+}
+
+.wd-myth-hint {
+  margin-top: 14px;
+  font-size: 11.5px;
+  color: #9ca3af;
+}
+
+.wd-myth-card.open .wd-myth-hint {
+  display: none;
+}
+
+/* ---------- BLOOD TYPES ---------- */
+.wd-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.wd-type-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 22px 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  font: inherit;
+  color: #111827;
+}
+
+.wd-type-card:hover {
+  transform: translateY(-4px);
+}
+
+.wd-type-card.active {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: #dc2626;
+}
+
+.wd-type-card .label {
+  font-size: 26px;
+  font-weight: 800;
+  color: #dc2626;
+}
+
+.wd-type-info {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.35s ease;
+}
+
+.wd-type-info.visible {
+  padding: 28px 30px;
+  max-height: 600px;
+  opacity: 1;
+}
+
+.wd-type-info h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.wd-type-info p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+/* grid of compatibility cells shown after picking a blood type */
+.wd-type-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.wd-type-info-cell {
+  background: #f9fafb;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.wd-type-info-cell h5 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.wd-type-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.wd-type-info .tag {
+  display: inline-block;
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ---------- DONOR STORIES ---------- */
+.wd-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.wd-story-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 30px 26px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.wd-story-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.wd-quote-mark {
+  font-size: 34px;
+  color: #dc2626;
+  line-height: 1;
+  margin-bottom: 10px;
+  font-family: Georgia, serif;
+}
+
+.wd-story-card p.wd-quote {
+  color: #374151;
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.wd-story-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wd-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.wd-story-person .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.wd-story-person .role {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ---------- FINAL CTA ---------- */
+.wd-cta {
+  position: relative;
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(120deg, #dc2626 0%, #ef4444 45%, #f87171 100%);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.wd-cta h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.wd-cta p {
+  color: #fee2e2;
+  font-size: 16px;
+  max-width: 540px;
+  margin: 0 auto 34px;
+  line-height: 1.6;
+}
+
+.wd-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #7f1d1d;
+  padding: 18px 40px;
+  border-radius: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wd-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.wd-pre-reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.wd-pre-reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- eligibility button reuse ---------- */
+.wd-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #dc2626;
+  color: #ffffff;
+  padding: 14px 26px;
+  border-radius: 40px;
+  font-size: 14.5px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.wd-btn-primary:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1024px) {
+  .wd-section { padding: 70px 24px; }
+  .wd-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .wd-types-grid { grid-template-columns: repeat(4, 1fr); }
+  .wd-stories-grid { grid-template-columns: repeat(2, 1fr); }
+  .wd-eligibility { grid-template-columns: 1fr; }
+  .wd-flow { flex-direction: column; }
+  .wd-flow-arrow { width: 2px; height: 30px; background: repeating-linear-gradient(180deg, #dc2626 0 8px, transparent 8px 14px); }
+  .wd-flow-arrow::after { right: 50%; top: -1px; transform: translateX(50%) rotate(45deg); }
+}
+
+@media (max-width: 768px) {
+  .wd-hero { padding: 130px 20px 70px; }
+  .wd-hero-title { font-size: 36px; }
+  .wd-heading { font-size: 26px; }
+  .wd-grid-4 { grid-template-columns: 1fr; }
+  .wd-benefits { grid-template-columns: 1fr; }
+  .wd-myths { grid-template-columns: 1fr; }
+  .wd-types-grid { grid-template-columns: repeat(2, 1fr); }
+  .wd-stories-grid { grid-template-columns: 1fr; }
+  .wd-cta h2 { font-size: 28px; }
+  .wd-eligibility { padding: 28px 22px; }
+}
+
+@media (max-width: 480px) {
+  .wd-hero-title { font-size: 30px; }
+  .wd-type-info-grid { grid-template-columns: 1fr; }
+}

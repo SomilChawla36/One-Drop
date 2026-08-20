@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | One Drop Blood Bank</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+                        <path d="M12 2s-6 8-6 13a6 6 0 0 0 12 0c0-5-6-13-6-13z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">One Drop</span>
+                    <span class="logo-sub">BLOOD BANK</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why-donate.html">Why Donate</a></li>
+                <li><a href="find.html">Find Blood</a></li>
+                <li><a href="become-a-donar.html">Become a Donor</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="login.html" class="active">Sign In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="find.html" class="btn-request">Request Blood</a>
+                <button class="hamburger" id="hamburger" aria-label="menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="auth-page">
+        <section class="auth-layout" aria-labelledby="signin-title">
+
+            <aside class="auth-visual">
+                <div class="visual-content">
+                    <p class="visual-kicker">Every drop matters</p>
+                    <h1>Your kindness can save a life.</h1>
+                    <p>
+                        Sign in to continue your journey as part of the One Drop
+                        blood donation community.
+                    </p>
+                </div>
+            </aside>
+
+            <section class="auth-form-area">
+                <header class="auth-heading">
+                    <span>Welcome back</span>
+                    <h1 id="signin-title">Sign in</h1>
+                    <p>Access your One Drop account.</p>
+                </header>
+
+                <form class="auth-form" action="#" method="post">
+
+                    <div class="form-field">
+                        <label for="signin-email">Email address</label>
+                        <input
+                            type="email"
+                            id="signin-email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="signin-password">Password</label>
+                        <input
+                            type="password"
+                            id="signin-password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <div class="captcha-box">
+                        <div class="captcha-code" aria-label="Captcha code">
+                            7K4P
+                        </div>
+
+                        <div class="form-field">
+                            <label for="signin-captcha">Enter the captcha</label>
+                            <input
+                                type="text"
+                                id="signin-captcha"
+                                name="captcha"
+                                placeholder="Type the code shown"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label" for="remember-me">
+                            <input
+                                type="checkbox"
+                                id="remember-me"
+                                name="remember"
+                            >
+                            Remember me
+                        </label>
+
+                        <a href="#" class="text-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        Sign In
+                    </button>
+                </form>
+
+                <p class="auth-switch">
+                    New to One Drop?
+                    <a href="signup.html" class="text-link">Create an account</a>
+                </p>
+            </section>
+        </section>
+
+        <footer class="auth-footer">
+            <p>&copy; 2024 One Drop Blood Bank. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="../javaScript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Blood Near You | One Drop</title>
+  <link rel="stylesheet" href="../css/find.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- EXACT NAVBAR MATCHING THE PROVIDED IMAGE -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+            <path d="M12 2s-6 8-6 13a6 6 0 0 0 12 0c0-5-6-13-6-13z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">One Drop</span>
+          <span class="logo-sub">BLOOD BANK</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why-donate.html">Why Donate</a></li>
+        <li><a href="findblood.html" class="active">Find Blood</a></li>
+        <li><a href="become-a-donar.html">Become a Donor</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="login.html">Sign In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+      <div class="nav-right">
+<a href="find.html" class="btn-request">Request Blood</a>
+<button class="hamburger" id="hamburger" aria-label="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <span class="badge badge-emergency">Emergency Network</span>
+        <h1 class="hero-title">Find Blood <span>Near You</span></h1>
+        <p class="hero-subtitle">Instantly locate compatible blood donors, accredited blood banks, and live blood units near your location.</p>
+
+        <div class="search-card">
+          <span class="form-group-label">Select Blood Group Required</span>
+          
+          <div class="blood-group-grid">
+            <label>
+              <input type="radio" name="blood_group" value="A+">
+              <span class="blood-chip">A+</span>
+            </label>
+            <label>
+              <input type="radio" name="blood_group" value="A-">
+              <span class="blood-chip">A-</span>
+            </label>
+            <label>
+              <input type="radio" name="blood_group" value="B+">
+              <span class="blood-chip">B+</span>
+            </label>
+            <label>
+              <input type="radio" name="blood_group" value="B-">
+              <span class="blood-chip">B-</span>
+            </label>
+            <label>
+              <input type="radio" name="blood_group" value="AB+">
+              <span class="blood-chip">AB+</span>
+            </label>
+            <label>
+              <input type="radio" name="blood_group" value="AB-">
+              <span class="blood-chip">AB-</span>
+            </label>
+            <label>
+              <input type="radio" name="blood_group" value="O+" checked>
+              <span class="blood-chip">O+</span>
+            </label>
+            <label>
+              <input type="radio" name="blood_group" value="O-">
+              <span class="blood-chip">O-</span>
+            </label>
+          </div>
+
+          <div class="search-fields-grid">
+            <div class="input-wrapper">
+              <label for="location">Location / City / PIN</label>
+              <input type="text" id="location" class="form-control" placeholder="e.g. Downtown or 10001" value="Central City">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="radius">Radius</label>
+              <select id="radius" class="form-control">
+                <option>5 km</option>
+                <option selected>10 km</option>
+                <option>25 km</option>
+                <option>50 km</option>
+              </select>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="units">Units Required</label>
+              <input type="number" id="units" class="form-control" value="2" min="1" max="10">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="urgency">Urgency</label>
+              <select id="urgency" class="form-control">
+                <option>Normal</option>
+                <option>Urgent</option>
+                <option selected>Emergency</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="button" class="btn-search">
+            🔍 Search Blood
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="container">
+      
+      <div class="dynamic-results-wrapper">
+
+        <div class="filter-bar">
+          <div class="filter-group">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #6B7280;">FILTER:</span>
+            <span class="filter-chip active" style="background-color: #FEF2F2; color: #EF4444; border-color: #FECACA;">All Sources</span>
+            <span class="filter-chip">Blood Banks</span>
+            <span class="filter-chip">Hospitals</span>
+            <span class="filter-chip">Available Now</span>
+          </div>
+          <div class="sort-wrapper">
+            <span>Sort by:</span>
+            <select class="form-control" style="height: 36px; padding: 0 12px; width: auto; font-size: 0.85rem;">
+              <option>Nearest Distance</option>
+              <option>Highest Stock</option>
+              <option>Recently Updated</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="results-map-layout">
+          
+          <div class="results-list">
+            <div style="margin-bottom: 8px;">
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: #111827;">12 Blood Sources Found Near You</h3>
+              <p style="font-size: 0.85rem; color: #6B7280;">Showing verified availability within 10 km radius</p>
+            </div>
+
+            <!-- Result Card 1 -->
+            <div class="result-card">
+              <div class="result-card-header">
+                <div>
+                  <div class="source-name">
+                    CityCare Blood Bank
+                    <span class="badge badge-verified">✓ Verified Bank</span>
+                  </div>
+                  <div class="meta-info" style="margin-top: 6px; margin-bottom: 12px;">
+                    <span>📍 2.1 km away</span>
+                    <span>🚗 Approx. 8 mins</span>
+                    <span style="color: #10B981; font-weight: 600;">🟢 Open 24/7</span>
+                  </div>
+                </div>
+                <span class="distance-tag">2.1 km</span>
+              </div>
+
+              <div class="units-available-pills">
+                <span class="unit-pill highlight">O+ (31 Units)</span>
+                <span class="unit-pill">A+ (24 Units)</span>
+                <span class="unit-pill">B+ (12 Units)</span>
+                <span class="unit-pill">AB+ (5 Units)</span>
+              </div>
+
+              <p style="font-size: 0.75rem; color: #9CA3AF; margin-bottom: 16px;">Verified 6 minutes ago</p>
+
+              <div class="card-actions">
+                <button class="btn-secondary">View Details</button>
+                <button class="btn-secondary">Get Directions</button>
+                <button class="btn-secondary btn-call">📞 Call Bank</button>
+              </div>
+            </div>
+
+            <!-- Result Card 2 -->
+            <div class="result-card">
+              <div class="result-card-header">
+                <div>
+                  <div class="source-name">
+                    Metro Red Cross Center
+                    <span class="badge badge-verified">✓ Verified Bank</span>
+                  </div>
+                  <div class="meta-info" style="margin-top: 6px; margin-bottom: 12px;">
+                    <span>📍 4.5 km away</span>
+                    <span>🚗 Approx. 14 mins</span>
+                    <span style="color: #10B981; font-weight: 600;">🟢 Open Now</span>
+                  </div>
+                </div>
+                <span class="distance-tag">4.5 km</span>
+              </div>
+
+              <div class="units-available-pills">
+                <span class="unit-pill highlight">O+ (14 Units)</span>
+                <span class="unit-pill">O- (2 Units)</span>
+                <span class="unit-pill">A- (4 Units)</span>
+              </div>
+
+              <p style="font-size: 0.75rem; color: #9CA3AF; margin-bottom: 16px;">Verified 12 minutes ago</p>
+
+              <div class="card-actions">
+                <button class="btn-secondary">View Details</button>
+                <button class="btn-secondary">Get Directions</button>
+                <button class="btn-secondary btn-call">📞 Call Bank</button>
+              </div>
+            </div>
+
+            <!-- Result Card 3 -->
+            <div class="result-card">
+              <div class="result-card-header">
+                <div>
+                  <div class="source-name">
+                    St. Jude Memorial Hospital
+                    <span class="badge badge-verified">✓ Hospital Stock</span>
+                  </div>
+                  <div class="meta-info" style="margin-top: 6px; margin-bottom: 12px;">
+                    <span>📍 5.8 km away</span>
+                    <span>🚗 Approx. 18 mins</span>
+                    <span style="color: #10B981; font-weight: 600;">🟢 Open 24/7</span>
+                  </div>
+                </div>
+                <span class="distance-tag">5.8 km</span>
+              </div>
+
+              <div class="units-available-pills">
+                <span class="unit-pill highlight">O+ (8 Units)</span>
+                <span class="unit-pill">B+ (19 Units)</span>
+              </div>
+
+              <p style="font-size: 0.75rem; color: #9CA3AF; margin-bottom: 16px;">Verified 20 minutes ago</p>
+
+              <div class="card-actions">
+                <button class="btn-secondary">View Details</button>
+                <button class="btn-secondary">Get Directions</button>
+                <button class="btn-secondary btn-call">📞 Call Emergency</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- MAP AREA -->
+          <div class="map-container">
+            <div class="map-visual">
+              <div class="map-pin pin-user" title="Your Location">You</div>
+              <div class="map-pin pin-bank-1" title="CityCare Blood Bank">🩸</div>
+              <div class="map-pin pin-bank-2" title="Metro Red Cross">🩸</div>
+              <div class="map-pin pin-hospital" title="St. Jude Hospital">🏥</div>
+            </div>
+            <div class="map-legend">
+              <div class="legend-item"><span class="status-dot status-red"></span> Blood Bank</div>
+              <div class="legend-item"><span class="status-dot" style="background-color:#0EA5E9;"></span> Hospital</div>
+              <div class="legend-item"><span class="status-dot" style="background-color:#3B82F6;"></span> Your Location</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COMPATIBLE DONORS -->
+        <section class="donors-section">
+          <div class="section-header">
+            <h2 class="section-title">Verified Nearby Donors</h2>
+            <span class="badge badge-verified">Secure Connect</span>
+          </div>
+
+          <div class="donors-grid">
+            <div class="donor-card">
+              <div class="donor-header">
+                <div class="donor-avatar-info">
+                  <div class="donor-avatar">AS</div>
+                  <div>
+                    <div class="donor-name">Aarav S.</div>
+                    <span style="font-size: 0.75rem; color: #10B981;">✓ Verified Donor</span>
+                  </div>
+                </div>
+                <span class="donor-group-badge">O+</span>
+              </div>
+              <div class="donor-details">
+                <span>📍 Approx 3.4 km away</span>
+                <span>🕒 Last donated: 4 months ago</span>
+                <span>🟢 Available for emergency call</span>
+              </div>
+              <input type="checkbox" id="req-donor-1" class="req-trigger">
+              <label for="req-donor-1" class="btn-secondary req-btn" style="width: 100%; justify-content: center; background-color: #FEF2F2; color: #EF4444; border-color: #FECACA; cursor: pointer;">
+                <span class="text-default">Send Direct Request</span>
+                <span class="text-sent">✓ Request Sent</span>
+              </label>
+            </div>
+
+            <div class="donor-card">
+              <div class="donor-header">
+                <div class="donor-avatar-info">
+                  <div class="donor-avatar">MK</div>
+                  <div>
+                    <div class="donor-name">Meera K.</div>
+                    <span style="font-size: 0.75rem; color: #10B981;">✓ Verified Donor</span>
+                  </div>
+                </div>
+                <span class="donor-group-badge">O+</span>
+              </div>
+              <div class="donor-details">
+                <span>📍 Approx 5.1 km away</span>
+                <span>🕒 Last donated: 6 months ago</span>
+                <span>🟢 Available now</span>
+              </div>
+              <input type="checkbox" id="req-donor-2" class="req-trigger">
+              <label for="req-donor-2" class="btn-secondary req-btn" style="width: 100%; justify-content: center; background-color: #FEF2F2; color: #EF4444; border-color: #FECACA; cursor: pointer;">
+                <span class="text-default">Send Direct Request</span>
+                <span class="text-sent">✓ Request Sent</span>
+              </label>
+            </div>
+
+            <div class="donor-card">
+              <div class="donor-header">
+                <div class="donor-avatar-info">
+                  <div class="donor-avatar">PR</div>
+                  <div>
+                    <div class="donor-name">Priya R.</div>
+                    <span style="font-size: 0.75rem; color: #10B981;">✓ Verified Donor</span>
+                  </div>
+                </div>
+                <span class="donor-group-badge">O+</span>
+              </div>
+              <div class="donor-details">
+                <span>📍 Approx 7.0 km away</span>
+                <span>🕒 Last donated: 3 months ago</span>
+                <span>🟢 Available now</span>
+              </div>
+              <input type="checkbox" id="req-donor-3" class="req-trigger">
+              <label for="req-donor-3" class="btn-secondary req-btn" style="width: 100%; justify-content: center; background-color: #FEF2F2; color: #EF4444; border-color: #FECACA; cursor: pointer;">
+                <span class="text-default">Send Direct Request</span>
+                <span class="text-sent">✓ Request Sent</span>
+              </label>
+            </div>
+
+            <div class="donor-card">
+              <div class="donor-header">
+                <div class="donor-avatar-info">
+                  <div class="donor-avatar">JD</div>
+                  <div>
+                    <div class="donor-name">John D.</div>
+                    <span style="font-size: 0.75rem; color: #10B981;">✓ Verified Donor</span>
+                  </div>
+                </div>
+                <span class="donor-group-badge">A-</span>
+              </div>
+              <div class="donor-details">
+                <span>📍 Approx 2.8 km away</span>
+                <span>🕒 Last donated: 5 months ago</span>
+                <span>🟢 Available for emergency call</span>
+              </div>
+              <input type="checkbox" id="req-donor-4" class="req-trigger">
+              <label for="req-donor-4" class="btn-secondary req-btn" style="width: 100%; justify-content: center; background-color: #FEF2F2; color: #EF4444; border-color: #FECACA; cursor: pointer;">
+                <span class="text-default">Send Direct Request</span>
+                <span class="text-sent">✓ Request Sent</span>
+              </label>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- BLOOD AVAILABILITY -->
+      <section style="margin-top: 48px;">
+        <div class="section-header">
+          <h2 class="section-title">Live Blood Availability Near You</h2>
+          <span class="timestamp"><span class="status-dot status-green"></span> Last updated 5 mins ago</span>
+        </div>
+
+        <div class="availability-grid">
+          <div class="avail-card">
+            <div class="avail-group">O+</div>
+            <div class="avail-units">42 Units</div>
+            <span class="avail-status status-good">Good Availability</span>
+          </div>
+          <div class="avail-card">
+            <div class="avail-group">O-</div>
+            <div class="avail-units">3 Units</div>
+            <span class="avail-status status-critical">Critical Shortage</span>
+          </div>
+          <div class="avail-card">
+            <div class="avail-group">A+</div>
+            <div class="avail-units">28 Units</div>
+            <span class="avail-status status-good">Good Availability</span>
+          </div>
+          <div class="avail-card">
+            <div class="avail-group">A-</div>
+            <div class="avail-units">7 Units</div>
+            <span class="avail-status status-low">Low Availability</span>
+          </div>
+          <div class="avail-card">
+            <div class="avail-group">B+</div>
+            <div class="avail-units">31 Units</div>
+            <span class="avail-status status-good">Good Availability</span>
+          </div>
+          <div class="avail-card">
+            <div class="avail-group">B-</div>
+            <div class="avail-units">6 Units</div>
+            <span class="avail-status status-low">Low Availability</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMERGENCY BLOOD REQUEST FORM -->
+      <section class="emergency-banner-box">
+        <div class="emergency-info">
+          <span class="badge badge-emergency">Need Blood Urgently?</span>
+          <h2>Broadcast an Emergency Request</h2>
+          <p>If you cannot find immediate units in blood banks, broadcast a verified emergency alert to nearby compatible donors and hospital networks instantly.</p>
+          <p style="font-size: 0.8rem; color: #6B7280;">🔒 Your request details will only be shared with verified contacts.</p>
+        </div>
+
+        <div class="emergency-form">
+          <div class="form-row">
+            <div class="input-wrapper">
+              <label>Patient Blood Group</label>
+              <select class="form-control">
+                <option>Select Group</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>A+</option>
+                <option>A-</option>
+              </select>
+            </div>
+            <div class="input-wrapper">
+              <label>Units Required</label>
+              <input type="number" class="form-control" placeholder="e.g. 2">
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label>Hospital / Medical Center Name</label>
+            <input type="text" class="form-control" placeholder="Enter hospital name and ward">
+          </div>
+
+          <div class="form-row">
+            <div class="input-wrapper">
+              <label>Contact Phone</label>
+              <input type="tel" class="form-control" placeholder="Contact number">
+            </div>
+            <div class="input-wrapper">
+              <label>Required By</label>
+              <select class="form-control">
+                <option>Immediately (Emergency)</option>
+                <option>Within 6 Hours</option>
+                <option>Within 24 Hours</option>
+              </select>
+            </div>
+          </div>
+
+          <input type="checkbox" id="emergency-trigger" class="emergency-trigger">
+          <label for="emergency-trigger" class="btn-search emergency-btn-label" style="margin-top: 8px; cursor: pointer;">
+            🚨 Broadcast Emergency Request
+          </label>
+          <div class="emergency-msg">
+            🚨 ALERT BROADCASTED! Notifying all compatible donors & nearby hospitals...
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOOD COMPATIBILITY CHART -->
+      <section class="compatibility-card">
+        <details>
+          <summary style="font-size: 1.1rem; color: #111827; font-weight: 700;">
+            <span style="color: #EF4444;">🩸</span> Check Quick Blood Group Compatibility Matrix
+          </summary>
+          <div class="compat-grid">
+            <div class="compat-item"><strong>O-</strong> Can receive: O-</div>
+            <div class="compat-item"><strong>O+</strong> Can receive: O+, O-</div>
+            <div class="compat-item"><strong>A-</strong> Can receive: A-, O-</div>
+            <div class="compat-item"><strong>A+</strong> Can receive: A+, A-, O+, O-</div>
+            <div class="compat-item"><strong>B-</strong> Can receive: B-, O-</div>
+            <div class="compat-item"><strong>B+</strong> Can receive: B+, B-, O+, O-</div>
+            <div class="compat-item"><strong>AB-</strong> Can receive: AB-, A-, B-, O-</div>
+            <div class="compat-item"><strong>AB+</strong> Universal Recipient (All)</div>
+          </div>
+        </details>
+      </section>
+
+      <!-- BECOME A DONOR CTA -->
+      <section class="donor-cta-banner">
+        <h2>Can't Find What You Need? Help Save A Life.</h2>
+        <p>Every donation can save up to 3 lives. Register today as a verified donor on the One Drop network.</p>
+        <button class="btn-cta-light">Become a Registered Donor →</button>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 One Drop Blood Bank & Healthcare Network. Verified emergency platform.</p>
+      <p style="margin-top: 6px; color: #9CA3AF; font-size: 0.75rem;">Designed for emergency accessibility, clean compliance, and high usability.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

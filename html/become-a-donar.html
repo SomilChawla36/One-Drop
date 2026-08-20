@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Become a Donor — One Drop Blood Bank</title>
+<link rel="stylesheet" href="../css/become-a-donar.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===================== NAVBAR (same as home) ===================== -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+          <path d="M12 2s-6 8-6 13a6 6 0 0 0 12 0c0-5-6-13-6-13z"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">One Drop</span>
+        <span class="logo-sub">BLOOD BANK</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="why-donate.html">Why Donate</a></li>
+      <li><a href="find.html">Find Blood</a></li>
+      <li><a href="become-a-donar.html" class="active">Become a Donor</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="login.html">Sign In</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href="find.html" class="btn-request">Request Blood</a>
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== DONOR PAGE ===================== -->
+<main class="donor-page">
+  <div class="donor-grid">
+
+    <!-- ---------- LEFT : intro ---------- -->
+    <section class="donor-intro">
+      <span class="intro-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+        DONOR REGISTRATION
+      </span>
+
+      <h1 class="intro-title">Become a <span>life-saver</span> today.</h1>
+
+      <p class="intro-desc">
+        Registration takes less than 5 minutes. Once registered, you'll be
+        matched with patients who need your blood type.
+      </p>
+
+      <ul class="intro-list">
+        <li>
+          <span class="li-ic">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6C19 16.5 12 21 12 21z"/></svg>
+          </span>
+          Matched with compatible patients automatically
+        </li>
+        <li>
+          <span class="li-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+          </span>
+          Digital certificate for every donation
+        </li>
+        <li>
+          <span class="li-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="15" height="15"><path d="M12 2s-6 6.5-6 11a6 6 0 0 0 12 0c0-4.5-6-11-6-11z"/></svg>
+          </span>
+          Nearest donation centre notifications
+        </li>
+      </ul>
+
+      <figure class="intro-photo">
+        <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=900&q=80" alt="Blood donation in progress" />
+        <figcaption>
+          <strong>Join 24,800+ donors</strong>
+          <span>making a difference every day</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ---------- RIGHT : form card ---------- -->
+    <section class="donor-card">
+
+      <!-- step indicator (visual) -->
+      <div class="steps">
+        <div class="step active"><span class="dot">1</span><em>Personal Info</em></div>
+        <div class="step"><span class="dot">2</span><em>Location</em></div>
+        <div class="step"><span class="dot">3</span><em>Medical</em></div>
+        <div class="step"><span class="dot">4</span><em>Review</em></div>
+      </div>
+
+      <form class="donor-form" action="#" method="post">
+
+        <!-- Personal Info -->
+        <h3 class="form-section-title">Personal Info</h3>
+        <div class="fields">
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" name="fullName" placeholder="Your full name" required />
+          </div>
+          <div class="field">
+            <label>Father's Name</label>
+            <input type="text" name="fatherName" placeholder="Father's full name" required />
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <select name="gender" required>
+              <option value="" disabled selected>Select...</option>
+              <option>Male</option><option>Female</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Date of Birth</label>
+            <input type="date" name="dob" required />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
+          </div>
+          <div class="field field-full">
+            <label>Occupation</label>
+            <input type="text" name="occupation" placeholder="Your profession" />
+          </div>
+        </div>
+
+        <!-- Location -->
+        <h3 class="form-section-title">Location</h3>
+        <div class="fields">
+          <div class="field field-full">
+            <label>Address</label>
+            <input type="text" name="address" placeholder="House / Street" />
+          </div>
+          <div class="field">
+            <label>City</label>
+            <input type="text" name="city" placeholder="City" />
+          </div>
+          <div class="field">
+            <label>State</label>
+            <input type="text" name="state" placeholder="State" />
+          </div>
+          <div class="field">
+            <label>Pincode</label>
+            <input type="text" name="pincode" placeholder="000000" />
+          </div>
+          <div class="field">
+            <label>Nearest Centre</label>
+            <select name="centre">
+              <option value="" disabled selected>Select...</option>
+              <option>City Hospital Centre</option>
+              <option>Red Cross Bhavan</option>
+              <option>Community Health Camp</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Medical -->
+        <h3 class="form-section-title">Medical</h3>
+        <div class="fields">
+          <div class="field">
+            <label>Blood Group</label>
+            <select name="bloodGroup" required>
+              <option value="" disabled selected>Select...</option>
+              <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Weight (kg)</label>
+            <input type="number" name="weight" placeholder="e.g. 65" />
+          </div>
+          <div class="field">
+            <label>Last Donation</label>
+            <input type="date" name="lastDonation" />
+          </div>
+          <div class="field">
+            <label>Any Medical Condition?</label>
+            <select name="condition">
+              <option value="No" selected>No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+          <div class="field field-full check-field">
+            <label class="checkbox">
+              <input type="checkbox" name="agree" required />
+              <span>I confirm the information provided is accurate and I'm willing to donate blood.</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- nav buttons -->
+        <div class="card-nav">
+          <a href="index.html" class="btn-back">Back</a>
+          <button type="submit" class="btn-continue">Submit Registration</button>
+        </div>
+
+      </form>
+    </section>
+
+  </div>
+</main>
+
+<script src="../javaScript/script.js"></script>
+</body>
+</html>
